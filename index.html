@@ -36,7 +36,7 @@
                 </div>
             </div>
             <p>Rincian singkat tentang saya.</p>
-            <p>Saya seorang mahasiswa S1 Teknik Informasi IT Enthusiast yang memiliki passion dan minat tinggi pada bidang cloud engineering. Saya memiliki pengalaman dalam komputasi awan dasar dan pengembangan web. Saya juga memiliki kemampuan bekerja sama dalam tim dan memiliki keterampilan dalam mengelola proyek yang kompleks. Saya selalu mempelajari hal-hal baru dan menemukan solusi kreatif terhadap masalah. Selain itu, saya memiliki kemampuan komunikasi yang baik dan selalu berusaha memberikan hasil yang berkualitas tinggi.</p>
+            <p>Saya seorang mahasiswa S1 Teknik Informasi dan sebagai IT Enthusiast yang memiliki passion dan minat tinggi pada bidang cloud engineering. Saya memiliki pengalaman dalam cloud computing dasar dan pengembangan web. Saya juga memiliki kemampuan bekerja sama dalam tim dan memiliki keterampilan dalam mengelola proyek yang kompleks. Saya selalu mempelajari hal-hal baru dan menemukan solusi kreatif terhadap masalah. Selain itu, saya memiliki kemampuan komunikasi yang baik dan selalu berusaha memberikan hasil yang terbaik.</p>
         </section>
 
         <section id="education">
@@ -68,8 +68,50 @@
     </div>
 
     <footer>
-        <hr>
-        <a href="kritik_saran.html" class="button-elegan">Berikan Kritik & Saran</a>
+        <section id="kritik_saran">
+            <hr>
+            <a href="kritik_saran.html" class="button-elegan">Berikan Kritik & Saran</a>
+        </section>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var links = document.querySelectorAll('nav ul li a');
+            
+            links.forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    var targetId = this.getAttribute('href').substring(1);
+                    var targetElement = document.getElementById(targetId);
+                    smoothScroll(targetElement);
+                });
+            });
+    
+            function smoothScroll(target) {
+                var targetPosition = target.getBoundingClientRect().top + window.scrollY;
+                var startPosition = window.pageYOffset;
+                var distance = targetPosition - startPosition;
+                var duration = 800;
+                var start = null;
+    
+                window.requestAnimationFrame(step);
+    
+                function step(timestamp) {
+                    if (!start) start = timestamp;
+                    var progress = timestamp - start;
+                    window.scrollTo(0, easeInOutQuad(progress, startPosition, distance, duration));
+                    if (progress < duration) window.requestAnimationFrame(step);
+                }
+    
+                function easeInOutQuad(t, b, c, d) {
+                    t /= d / 2;
+                    if (t < 1) return c / 2 * t * t + b;
+                    t--;
+                    return -c / 2 * (t * (t - 2) - 1) + b;
+                }
+            }
+        });
+    </script>
+    
 </body>
 </html>
