@@ -188,3 +188,36 @@ form input[type="submit"] {
 form input[type="submit"]:hover {
     background: #292929;
 }
+
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 10px 0;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    nav ul li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    .profile {
+        flex-direction: column;
+    }
+    
+    .profile img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    form {
+        margin-right: 0;
+    }
+}
