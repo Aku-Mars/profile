@@ -230,6 +230,14 @@ form input[type="submit"]:hover {
     background: #292929;
 }
 
+#gambar img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 @media only screen and (max-width: 600px) {
     header {
         padding: 10px 0;

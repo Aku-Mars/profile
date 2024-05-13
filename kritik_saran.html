@@ -17,12 +17,9 @@
     </header>
 
     <div class="container">
-        <form action="#" method="POST">
+        <form id="kritikForm">
             <label for="nama">Nama:</label>
             <input type="text" id="nama" name="nama" required>
-
-            <label for="npm">NPM:</label>
-            <input type="text" id="npm" name="npm" required>
 
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
@@ -41,5 +38,23 @@
         <hr>
         <a href="index.html" class="button-elegan">Kembali ke Profile</a>
     </footer>
+
+    <script>
+        document.getElementById("kritikForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var formData = new FormData(this);
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "https://formsubmit.co/ajax/marifinsyam73@gmail.com", true);
+            xhr.setRequestHeader("Accept", "application/json");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    alert('Terima kasih! Kritik dan saran Anda telah terkirim.');
+                    // Reset form
+                    document.getElementById("kritikForm").reset();
+                }
+            };
+            xhr.send(formData);
+        });
+    </script>
 </body>
 </html>
