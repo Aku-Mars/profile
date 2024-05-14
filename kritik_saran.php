@@ -79,7 +79,7 @@ $result = $conn->query($sql);
         // Tampilkan data dari database dengan efek animasi AOS
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
-                echo '<div class="card" data-aos="flip-up" data-aos-duration="1500">';
+                echo '<div class="card" data-aos="zoom-in-up" data-aos-duration="1500">';
                 echo '<h2>' . $row['nama'] . '</h2>';
                 echo '<p>Email: ' . $row['email'] . '</p>';
                 echo '<p>Kritik: ' . $row['kritik'] . '</p>';

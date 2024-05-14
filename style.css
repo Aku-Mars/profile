@@ -111,6 +111,10 @@ tr:hover {
     margin-bottom: 20px;
 }
 
+.card h2 {
+    padding-top: 0;
+}
+
 .materi-button {
     display: inline-block;
     padding: 10px 20px;
