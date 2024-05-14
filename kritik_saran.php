@@ -70,18 +70,19 @@ $result = $conn->query($sql);
 
             <input type="submit" value="Submit" class="button-elegan">
         </form>
+    </div>
 
+    <div class="container">
+        <h1>Apa Kata Kalian?</h1>
         <?php
         // Tampilkan data dari database dengan efek animasi AOS
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
-                echo '<div data-aos="zoom-in-up" data-aos-duration="1500">';
-                echo '<div class="card">';
+                echo '<div class="card" data-aos="flip-up" data-aos-duration="1500">';
                 echo '<h2>' . $row['nama'] . '</h2>';
                 echo '<p>Email: ' . $row['email'] . '</p>';
                 echo '<p>Kritik: ' . $row['kritik'] . '</p>';
                 echo '<p>Saran: ' . $row['saran'] . '</p>';
-                echo '</div>';
                 echo '</div>';
             }
         } else {
