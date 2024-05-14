@@ -76,7 +76,7 @@ $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
                 echo '<div data-aos="zoom-in-up" data-aos-duration="1500">';
-                echo '<div class="card">'
+                echo '<div class="card">';
                 echo '<h2>' . $row['nama'] . '</h2>';
                 echo '<p>Email: ' . $row['email'] . '</p>';
                 echo '<p>Kritik: ' . $row['kritik'] . '</p>';
