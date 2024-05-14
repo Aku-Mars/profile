@@ -17,7 +17,7 @@
     </header>
 
     <div class="container">
-        <form id="kritikForm" method="post" action="kritik_saran.php">
+        <form id="kritikForm" method="post" action="proses.php">
             <label for="nama">Nama:</label>
             <input type="text" id="nama" name="nama" required>
 
