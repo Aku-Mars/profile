@@ -18,12 +18,21 @@ header h1 {
 nav {
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 nav ul {
     list-style-type: none;
-    padding-left: 12px;
+    padding: 0;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #333;
+    width: 100%;
+    text-align: center;
 }
+
 
 nav ul li {
     display: inline;
@@ -40,6 +49,26 @@ nav ul li a:hover {
     color: #ccc;
 }
 
+.nav-toggle {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-toggle:hover {
+    background-color: #444;
+}
+
+.show-nav {
+    display: flex;
+}
+
+
 h2 {
     padding-top: 30px;
 }
@@ -55,6 +84,20 @@ h2 {
     background: #f7f7f7;
     box-shadow: 15px 15px 30px #666,
                -15px -15px 30px #cfcfcf;
+}
+
+.container h2 {
+    text-align: center;
+    margin-top: 0px;
+}
+
+.tugas-image {
+    align-items: center;
+    width: 30%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 10px;
+    margin-left: 35%;
 }
 
 .profile {
@@ -115,6 +158,35 @@ tr:hover {
     padding-top: 0;
 }
 
+.card#pengertian {
+    margin-top: 20px;
+}
+
+pre {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    padding-top: 25px;
+    overflow-x: auto;
+}
+
+pre code {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+}
+
+pre code::before {
+    content: attr(data-line);
+    display: inline-block;
+    width: 2em;
+    color: #888;
+}
+
+pre code span {
+    display: inline-block;
+}
+
 .materi-button {
     display: inline-block;
     padding: 10px 20px;
@@ -164,6 +236,7 @@ tr:hover {
     font-weight: bold;
     text-decoration: none;
     display: inline-block;
+    margin-right: 1%;
 }
 
 .button-elegan::after {

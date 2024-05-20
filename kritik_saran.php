@@ -41,8 +41,8 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Profile">
-    <meta property="og:description" content="Deskripsi singkat mengenai profile pembuat website">
+    <meta property="og:title" content="Kritik dan Saran">
+    <meta property="og:description" content="Kritik dan Saran Untuk Author">
     <meta property="og:image" content="https://raw.githubusercontent.com/Aku-Mars/gambar/main/bannercp.png">
     <meta property="og:url" content="https://akumars.dev/">    
     <title>Kritik & Saran</title>

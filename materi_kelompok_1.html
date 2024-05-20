@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Materi Kelompok - PHP">
+    <meta property="og:description" content="Penjelasan Materi Mengenai PHP">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Aku-Mars/gambar/main/bannercps.png">
+    <meta property="og:url" content="https://akumars.dev/">    
+    <title>Materi Kelompok - PHP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://raw.githubusercontent.com/Aku-Mars/gambar/main/neko.png" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            AOS.init();
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Materi Kelompok - PHP</h1>
+        <button class="nav-toggle">Menu</button>
+        <nav>
+            <ul>
+                <li><a href="#pengertian">Pengertian PHP</a></li>
+                <li><a href="#sejarah">Sejarah PHP</a></li>
+                <li><a href="#syntax">Syntax Dasar PHP</a></li>
+                <li><a href="#fungsi">Fungsi dan Kegunaan PHP</a></li>
+                <li><a href="#variabel">Variabel PHP</a></li>
+                <li><a href="#operator">Operator PHP</a></li>
+                <li><a href="#kondisi">Pengkondisian PHP</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <h2>PHP (Hypertext Preprocessor)</h2>
+        <img src="./gambar/php.png" alt="PHP - Materi Kelompok" class="tugas-image">
+        <div class="card" data-aos="fade-up" data-aos-duration="1500" id="pengertian">
+            <h2>Pengertian PHP</h2>
+            <p>PHP adalah singkatan dari "Hypertext Preprocessor", yaitu bahasa pemrograman yang digunakan terutama untuk pengembangan web. PHP adalah bahasa server-side yang artinya kode PHP dijalankan di server dan hasilnya dikirimkan ke browser sebagai HTML.</p>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-duration="1500" id="sejarah">
+            <h2>Sejarah PHP</h2>
+            <p>PHP pertama kali dibuat oleh Rasmus Lerdorf pada tahun 1994 dan awalnya bernama "Personal Home Page". Seiring waktu, PHP berkembang menjadi bahasa pemrograman yang populer untuk pengembangan web dinamis dan sekarang digunakan oleh jutaan situs web di seluruh dunia.</p>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-duration="1500" id="syntax">
+            <h2>Syntax Dasar PHP</h2>
+            <p>Berikut adalah contoh sintaks dasar dari PHP:</p>
+            <pre>
+                <code>
+&lt;?php
+    echo "Hello, World!";
+?&gt;
+                </code>
+            </pre>
+            <p>Contoh di atas akan menampilkan teks "Hello, World!" di halaman web.</p>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-duration="1500" id="fungsi">
+            <h2>Fungsi dan Kegunaan PHP</h2>
+            <p>PHP memiliki banyak fungsi dan kegunaan dalam pengembangan web, antara lain:</p>
+            <ul>
+                <li>Menghasilkan konten dinamis di halaman web.</li>
+                <li>Mengelola data dari formulir HTML.</li>
+                <li>Berinteraksi dengan database.</li>
+                <li>Mengontrol sesi pengguna.</li>
+                <li>Mengakses dan memanipulasi file di server.</li>
+            </ul>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-duration="1500" id="variabel">
+            <h2>Variabel PHP</h2>
+            <p>Variabel dalam PHP digunakan untuk menyimpan data yang dapat diubah selama skrip dijalankan. Variabel dalam PHP diawali dengan tanda dolar ($) diikuti dengan nama variabel. Berikut adalah contoh deklarasi variabel dalam PHP:</p>
+            <pre>
+                <code>
+&lt;?php
+    $nama = "John";
+    $umur = 25;
+    $tinggi = 180.5;
+?&gt;
+                </code>
+            </pre>
+            <p>Contoh di atas mendeklarasikan tiga variabel: $nama, $umur, dan $tinggi.</p>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-duration="1500" id="operator">
+            <h2>Operator PHP</h2>
+            <p>Operator dalam PHP digunakan untuk melakukan operasi pada variabel dan nilai. Berikut adalah beberapa operator dasar dalam PHP:</p>
+            <ul>
+                <li>Operator Aritmatika: +, -, *, /, %</li>
+                <li>Operator Penugasan: =, +=, -=, *=, /=, %=</li>
+                <li>Operator Perbandingan: ==, !=, &gt;, &lt;, &gt;=, &lt;=</li>
+                <li>Operator Logika: &&, ||, !</li>
+            </ul>
+            <p>Berikut adalah contoh penggunaan operator aritmatika dalam PHP:</p>
+            <pre>
+                <code>
+&lt;?php
+    $a = 10;
+    $b = 20;
+    $c = $a + $b;
+    echo $c; // Output: 30
+?&gt;
+                </code>
+            </pre>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-duration="1500" id="kondisi">
+            <h2>Pengkondisian PHP</h2>
+            <p>Pengkondisian dalam PHP digunakan untuk membuat keputusan berdasarkan kondisi tertentu. Struktur pengkondisian yang paling umum digunakan adalah pernyataan if, else if, dan else. Berikut adalah contoh pengkondisian dalam PHP:</p>
+            <pre>
+                <code>
+&lt;?php
+    $nilai = 85;
+    if ($nilai >= 90) {
+        echo "A";
+    } elseif ($nilai >= 80) {
+        echo "B";
+    } elseif ($nilai >= 70) {
+        echo "C";
+    } elseif ($nilai >= 60) {
+        echo "D";
+    } else {
+        echo "E";
+    }
+?&gt;
+                </code>
+            </pre>
+            <p>Contoh di atas akan menampilkan "B" karena nilai adalah 85.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <hr>
+        <a href="index.html" class="button-elegan">Kembali Ke Halaman Awal</a>
+        <a href="https://adityajohansah-pstic.kesug.com/profile/index.html?i=1" class="button-elegan">Kembali Ke Web Ketua</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
