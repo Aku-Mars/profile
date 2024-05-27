@@ -82,8 +82,8 @@ h2 {
     text-align: justify;
     border-radius: 20px;
     background: #f7f7f7;
-    box-shadow: 15px 15px 30px #666,
-               -15px -15px 30px #cfcfcf;
+    box-shadow: 5px 5px 30px #666,
+               -5px -5px 30px #cfcfcf;
 }
 
 .container h2 {
