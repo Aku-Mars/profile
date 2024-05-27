@@ -21,7 +21,7 @@
 <body>
     <header>
         <h1>Materi Kelompok - PHP</h1>
-        <button class="nav-toggle">Menu</button>
+        <button class="nav-toggle">Menu ▼</button>
         <nav>
             <ul>
                 <li><a href="#pengertian">Pengertian PHP</a></li>
@@ -31,6 +31,11 @@
                 <li><a href="#variabel">Variabel PHP</a></li>
                 <li><a href="#operator">Operator PHP</a></li>
                 <li><a href="#kondisi">Pengkondisian PHP</a></li>
+                <li><a href="#looping">Looping PHP</a></li>
+                <li><a href="#array">Array PHP</a></li>
+                <li><a href="#functions">Fungsi PHP</a></li>
+                <li><a href="#superglobals">Superglobals PHP</a></li>
+                <li><a href="#filehandling">File Handling PHP</a></li>
             </ul>
         </nav>
     </header>
@@ -59,6 +64,7 @@
                 </code>
             </pre>
             <p>Contoh di atas akan menampilkan teks "Hello, World!" di halaman web.</p>
+            <a href="php/syntax.php" class="materi-button">Coba kode</a>
         </div>
 
         <div class="card" data-aos="fade-up" data-aos-duration="1500" id="fungsi">
@@ -86,6 +92,7 @@
                 </code>
             </pre>
             <p>Contoh di atas mendeklarasikan tiga variabel: $nama, $umur, dan $tinggi.</p>
+            <a href="php/variabel.php" class="materi-button">Coba kode</a>
         </div>
 
         <div class="card" data-aos="fade-up" data-aos-duration="1500" id="operator">
@@ -108,6 +115,7 @@
 ?&gt;
                 </code>
             </pre>
+            <a href="php/operator.php" class="materi-button">Coba kode</a>
         </div>
 
         <div class="card" data-aos="fade-up" data-aos-duration="1500" id="kondisi">
@@ -132,6 +140,90 @@
                 </code>
             </pre>
             <p>Contoh di atas akan menampilkan "B" karena nilai adalah 85.</p>
+            <a href="php/kondisi.php" class="materi-button">Coba kode</a>
+        </div>
+        
+        <div class="card" data-aos="fade-up" data-aos-duration="1500" id="looping">
+            <h2>Looping PHP</h2>
+            <p>Looping digunakan untuk menjalankan blok kode berulang kali. PHP mendukung beberapa jenis looping, seperti for, while, do-while, dan foreach. Berikut adalah contoh penggunaan loop for dalam PHP:</p>
+            <pre>
+                <code>
+&lt;?php
+    for ($i = 0; $i < 5; $i++) {
+        echo "Nomor: $i &lt;br&gt;";
+    }
+?&gt;
+                </code>
+            </pre>
+            <p>Contoh di atas akan menampilkan angka 0 sampai 4 di halaman web.</p>
+            <a href="php/looping.php" class="materi-button">Coba kode</a>
+        </div>
+        
+        <div class="card" data-aos="fade-up" data-aos-duration="1500" id="array">
+            <h2>Array PHP</h2>
+            <p>Array adalah tipe data yang dapat menyimpan beberapa nilai dalam satu variabel. Berikut adalah contoh deklarasi dan penggunaan array dalam PHP:</p>
+            <pre>
+                <code>
+&lt;?php
+    $buah = array("Apel", "Mangga", "Jeruk");
+    echo "Saya suka " . $buah[0];
+    // Output: Saya suka Apel
+?&gt;
+                </code>
+            </pre>
+            <p>Contoh di atas mendeklarasikan array bernama $buah yang berisi tiga elemen: "Apel", "Mangga", dan "Jeruk".</p>
+            <a href="php/array.php" class="materi-button">Coba kode</a>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-duration="1500" id="functions">
+            <h2>Fungsi PHP</h2>
+            <p>Fungsi dalam PHP digunakan untuk mengelompokkan kode yang dapat digunakan kembali. Fungsi dapat menerima parameter dan mengembalikan nilai. Berikut adalah contoh deklarasi dan penggunaan fungsi dalam PHP:</p>
+            <pre>
+                <code>
+&lt;?php
+    function salam($nama) {
+        return "Halo, $nama!";
+    }
+    echo salam("John");
+    // Output: Halo, John!
+?&gt;
+                </code>
+            </pre>
+            <p>Contoh di atas mendeklarasikan fungsi bernama salam yang menerima satu parameter $nama dan mengembalikan teks sapaan.</p>
+            <a href="php/functions.php" class="materi-button">Coba kode</a>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-duration="1500" id="superglobals">
+            <h2>Superglobals PHP</h2>
+            <p>Superglobals adalah variabel built-in di PHP yang selalu tersedia di semua cakupan. Contoh superglobals termasuk $_GET, $_POST, $_SESSION, $_COOKIE, $_REQUEST, $_SERVER, dan $_FILES. Berikut adalah contoh penggunaan $_GET untuk mengambil data dari URL:</p>
+            <pre>
+                <code>
+&lt;?php
+    // URL: example.com?nama=John
+    $nama = $_GET['nama'];
+    echo "Halo, $nama";
+    // Output: Halo, John
+?&gt;
+                </code>
+            </pre>
+            <p>Contoh di atas mengambil parameter nama dari URL dan menampilkannya di halaman web.</p>
+            <a href="php/superglobals.php" class="materi-button">Coba kode</a>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-duration="1500" id="filehandling">
+            <h2>File Handling PHP</h2>
+            <p>File handling dalam PHP digunakan untuk membaca, menulis, dan mengelola file di server. Berikut adalah contoh cara membuka dan membaca file dalam PHP:</p>
+            <pre>
+                <code>
+&lt;?php
+    $file = fopen("contoh.txt", "r") or die("Tidak bisa membuka file!");
+    echo fread($file, filesize("contoh.txt"));
+    fclose($file);
+?&gt;
+                </code>
+            </pre>
+            <p>Contoh di atas membuka file bernama contoh.txt dalam mode baca, membaca isinya, dan menutup file tersebut.</p>
+            <a href="php/filehandling.php" class="materi-button">Coba kode</a>
         </div>
     </div>
     
