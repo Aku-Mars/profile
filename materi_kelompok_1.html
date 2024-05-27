@@ -85,9 +85,10 @@
             <pre>
                 <code>
 &lt;?php
-    $nama = "John";
-    $umur = 25;
-    $tinggi = 180.5;
+    $nama = "Arifin";
+    $umur = 20;
+    $tinggi = 170.5;
+    echo "Halo Nama Saya {$nama}, Umur Saya {$umur} tahun, dan Tinggi Saya {$tinggi} cm.";
 ?&gt;
                 </code>
             </pre>
@@ -184,8 +185,8 @@
     function salam($nama) {
         return "Halo, $nama!";
     }
-    echo salam("John");
-    // Output: Halo, John!
+    echo salam("Adit");
+    // Output: Halo, Adit!
 ?&gt;
                 </code>
             </pre>
@@ -196,18 +197,55 @@
         <div class="card" data-aos="fade-up" data-aos-duration="1500" id="superglobals">
             <h2>Superglobals PHP</h2>
             <p>Superglobals adalah variabel built-in di PHP yang selalu tersedia di semua cakupan. Contoh superglobals termasuk $_GET, $_POST, $_SESSION, $_COOKIE, $_REQUEST, $_SERVER, dan $_FILES. Berikut adalah contoh penggunaan $_GET untuk mengambil data dari URL:</p>
+            <h4>$_POST</h4>
+            <p>$_POST digunakan untuk mengambil data yang dikirim melalui formulir dengan metode POST:</p>
             <pre>
                 <code>
+&lt;form method="post" action=""&gt;
+    Nama: &lt;input type="text" name="nama"&gt;&lt;br&gt;
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+
 &lt;?php
-    // URL: example.com?nama=John
-    $nama = $_GET['nama'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nama = $_POST['nama'];
     echo "Halo, $nama";
-    // Output: Halo, John
+}
 ?&gt;
                 </code>
             </pre>
-            <p>Contoh di atas mengambil parameter nama dari URL dan menampilkannya di halaman web.</p>
-            <a href="php/superglobals.php" class="materi-button">Coba kode</a>
+
+            <h4>$_SESSION</h4>
+            <p>$_SESSION digunakan untuk menyimpan data sesi yang dapat diakses di seluruh halaman dalam aplikasi:</p>
+            <pre>
+                <code>
+&lt;?php
+session_start();
+$_SESSION["username"] = "john_doe";
+$_SESSION["email"] = "john@example.com";
+echo "Username: " . $_SESSION["username"] . "&lt;br&gt;";
+echo "Email: " . $_SESSION["email"];
+?&gt;
+                </code>
+            </pre>
+
+            <h4>$_COOKIE</h4>
+            <p>$_COOKIE digunakan untuk menyimpan data kecil di sisi klien yang dapat diakses di beberapa halaman:</p>
+            <pre>
+                <code>
+&lt;?php
+setcookie("user", "John Doe", time() + (86400 * 30), "/");
+if(isset($_COOKIE["user"])) {
+    echo "User: " . $_COOKIE["user"];
+} else {
+    echo "Cookie 'user' tidak ditemukan!";
+}
+?&gt;
+                </code>
+            </pre>
+            <p>Ini merupakan contoh project sederhana dari beberapa fungsi seperti get, post, session dan cookie.</p>
+            <p>Kode akses Username : admin, password : admin</p>
+            <a href="https://akumars.dev/daftar_tamu" class="materi-button">Contoh Project Sederhana</a>
         </div>
 
         <div class="card" data-aos="fade-up" data-aos-duration="1500" id="filehandling">
