@@ -167,8 +167,8 @@
                 <code>
 &lt;?php
     $buah = array("Apel", "Mangga", "Jeruk");
-    echo "Saya suka " . $buah[0];
-    // Output: Saya suka Apel
+    echo "Saya suka " . $buah[1];
+    // Output: Saya suka Mangga
 ?&gt;
                 </code>
             </pre>
@@ -197,6 +197,17 @@
         <div class="card" data-aos="fade-up" data-aos-duration="1500" id="superglobals">
             <h2>Superglobals PHP</h2>
             <p>Superglobals adalah variabel built-in di PHP yang selalu tersedia di semua cakupan. Contoh superglobals termasuk $_GET, $_POST, $_SESSION, $_COOKIE, $_REQUEST, $_SERVER, dan $_FILES. Berikut adalah contoh penggunaan $_GET untuk mengambil data dari URL:</p>
+            <h4>$_GET</h4>
+            <pre>
+                <code>
+&lt;if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nama = $_POST['nama'];
+    echo "Halo, $nama";
+}
+?&gt;
+                </code>
+            </pre>
+            
             <h4>$_POST</h4>
             <p>$_POST digunakan untuk mengambil data yang dikirim melalui formulir dengan metode POST:</p>
             <pre>
